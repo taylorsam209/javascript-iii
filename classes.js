@@ -1,46 +1,70 @@
 
 // Classes
 
-/*
-Classes are a tool for building similar objects over and over again.
-They are a construct that helps your organize your code.
 
-Let's work with some employees at a company.
-You work for Widget Co.  They have hundreds of employees.
-Make a class to help us build all of the employees.
-Each employee has:
-- first_name
-- last_name
-- email
-- age
+// Classes are a tool for building similar objects over and over again.
+// They are a construct that helps your organize your code.
 
-Each employee can:
-- makeWidget
-    - This returns a string equal to the employees first name + last name + the word widget
-    IE - "Dave Smith Widget"
+// Let's work with some employees at a company.
+// You work for Widget Co.  They have hundreds of employees.
+// Make a class to help us build all of the employees.
+// Each employee has:
+// - first_name
+// - last_name
+// - email
+// - age
 
-call your class Employee and receive all the data in the constructor in the order listed
-*/
+// Each employee can:
+// - makeWidget
+//     - This returns a string equal to the employees first name + last name + the word widget
+//     IE - "Dave Smith Widget"
+
+// call your class Employee and receive all the data in the constructor in the order listed
+class Employee {
+    constructor (first_name, last_name, email, age){
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.email = email;
+        this.age = age;
+    }
+    makeWidget(){
+        return this.first_name + " " + this.last_name + " Widget";
+    }
+}
 
 
 
-/*
 
-Next, make a manager for Widget Co.
-The manager has all the same properties as an Employee.
-They also have :
 
-- reports (other employees) that defaults to an empty array
-They can (methods) :
-   - hire
-        : Hire adds a new employee to their list of reports
-   - fire(index)
-        : Fire removes employees from their list of reports at the given index
+// Next, make a manager for Widget Co.
+// The manager has all the same properties as an Employee.
+// They also have :
 
-call your class Manager
+// - reports (other employees) that defaults to an empty array
+// They can (methods) :
+//    - hire
+//         : Hire adds a new employee to their list of reports
+//    - fire(index)
+//         : Fire removes employees from their list of reports at the given index
 
-*/
+// call your class Manager
 
+class Manager {
+    constructor (first_name, last_name, email, age, reports){
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.email = email;
+        this.age = age; 
+        this.reports = [];  
+    }
+    hire(emp){
+        this.reports.push(emp);
+    }
+
+    fire(index){
+        this.reports.splice(index, 1);
+    }
+}
 
 
 
@@ -64,7 +88,24 @@ Everytime they fire an employee they get a bonus of $100 add to their .
 
 call you class ProgressiveManager
 */
+// class ProgressiveManager{
+//     constructor (first_name, last_name, email, age, reports){
+//         this.first_name = first_name;
+//         this.last_name = last_name;
+//         this.email = email;
+//         this.age = age; 
+//         this.reports = [];
+//         this.title = 'Not a manager';
+//         this.bonus = 0;
+//     }
+//     hire(emp){
+//         this.reports.push(emp);
+//     }
 
+//     fire(index){
+//         this.reports.splice(index, 1);
+//     }
+// }
 
 
 

@@ -38,10 +38,32 @@ var employees = [{
 
 // Code here
 
+// function employeeUpdater(arr) {
+//   for(var i = 0; i < arr.length; i++){
+//     if(arr[i].firstName === "Theo"){
 
+//       arr.splice(i, 1);
+//     }
+//     else if(arr[i]["firstName"] === "Lorie"){
+//       arr[i]["department"] = 'HR';
+//     }
+//   }
+//   return arr;
+// }
 
+// employeeUpdater(employees);
 
-
+function employeeUpdater() {
+  for(var i = employees.length - 1; i > -1; i--) {
+    if(employees[i].firstName === "Theo") {
+      employees.splice(i, 1);
+      console.log(employees);
+    } else if (employees[i].firstName === "Lorie") {
+      employees[i].department = "HR";
+    }
+  }
+  return employees;
+ }
 
 
 // === PROBLEM 2 ==========
@@ -56,6 +78,15 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 // Code here
 
+function removeDuplicates(arr){
+  var newArray = [];
+  for(var i = 0; i < arr.length; i++){
+    if(!newArray.includes(arr[i])){
+      newArray.push(arr[i])
+    }
+  }
+  return newArray;
+}
 
 
 

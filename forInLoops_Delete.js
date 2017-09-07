@@ -33,6 +33,12 @@
 
 function showValues( obj ) {
   // CODE HERE
+  var cont = "";
+  for (var key in obj){
+     cont += obj[key];
+  }
+  console.log(cont);
+  return cont;
 }
 
 
@@ -43,7 +49,14 @@ function showValues( obj ) {
 
 // CODE HERE
 
-
+function greaterThan10(obj) {
+  for(var key in obj){
+    if(obj[key] > 10){
+      obj[key] = 0;
+    }
+  }
+  return obj;
+}
 
 // ========================
 
