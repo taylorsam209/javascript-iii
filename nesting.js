@@ -115,8 +115,8 @@ var cat = {
 
 // Code here
 
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;
 
 
 
@@ -155,7 +155,14 @@ var myCar = {
 
 // Code here
 
-
+// function recordCleaner(arr) {
+//   for(var i = 0; i < arr.length; i++){
+//     if(arr[i].atFaultForAccidents === true){
+//       arr[i].atFaultForAccidents = false;
+//     }
+//   }
+//   return arr;
+// }
 
 
 
